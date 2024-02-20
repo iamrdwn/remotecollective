@@ -1,0 +1,206 @@
+﻿*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+a,
+body,
+button,
+div,
+embed,
+html,
+main,
+nav,
+p,
+span,
+strong {
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    min-width: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+main,
+nav {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+:root {
+    --rgb-black: 0, 0, 0;
+    --rgb-beige: 252, 247, 248;
+    --rgb-blue: 39, 93, 173;
+    --rgb-grey: 91, 97, 106;
+    --rgb-blue-dark: 0, 55, 115;
+    --rgb-blue-light: 194, 246, 255;
+    --rgb-blue-lighter: 219, 228, 238;
+    --rgb-green: 0, 177, 50;
+    --rgb-red: 195, 35, 70;
+    --rgb-orange: 255, 138, 0;
+    --rgb-white: 255, 255, 255;
+    --color-black: rgb(var(--rgb-black));
+    --color-grey: rgb(var(--rgb-grey));
+    --color-blue: rgb(var(--rgb-blue));
+    --color-blue-dark: rgb(var(--rgb-blue-dark));
+    --color-blue-light: rgb(var(--rgb-blue-light));
+    --color-blue-lighter: rgb(var(--rgb-blue-lighter));
+    --color-green: rgb(var(--rgb-green));
+    --color-red: rgb(var(--rgb-red));
+    --color-orange: rgb(var(--rgb-orange));
+    --color-white: rgb(var(--rgb-white));
+    --color-beige: rgb(var(--rgb-beige));
+    --font-size: clamp(1.375rem, 2.225vw, 2rem);
+    --letter-spacing: -0.0015em;
+    --line-height: 1.3;
+    --transition: 0.15s cubic-bezier(0.33, 1, 0.68, 1);
+}
+html {
+    background: var(--color-black);
+    font-size: 16px;
+    min-height: -webkit-fill-available;
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--font-size) * 3.4);
+}
+body {
+    background: var(--color-beige);
+    color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    font-family: Family, Serif;
+    font-feature-settings: "liga", "dlig";
+    font-size: var(--font-size);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: var(--letter-spacing);
+    line-height: var(--line-height);
+    min-height: 100vh;
+    -webkit-tap-highlight-color: rgba(var(--rgb-blue-light), 0);
+    text-rendering: optimizeLegibility;
+}
+@supports (-webkit-touch-callout: none) {
+    body {
+        min-height: -webkit-fill-available;
+    }
+}
+a {
+    color: var(--color-white);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.0625em;
+}
+strong {
+    color: var(--color-blue);
+    font-weight: 700;
+    letter-spacing: normal;
+}
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 3.075em;
+    margin-inline: auto;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    width: min(100%, 34.5em);
+}
+.main--index {
+    margin-bottom: 6.1em;
+}
+@media (min-width: 64em) {
+    .main {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.55em;
+    margin-top: 3.55em;
+}
+.nav__main {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex: 1;
+    gap: 1em;
+    margin-inline: auto;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    width: min(100%, 34.5em);
+}
+.nav__body {
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+.nav__logo {
+    display: flex;
+}
+.nav__logo a {
+    align-items: center;
+    display: flex;
+    gap: 0.225em;
+    height: 1.375em;
+    text-decoration: none;
+}
+.tagline {
+    font-family: "Inter Display", Sans-Serif;
+    font-size: 70%;
+}
+.nav__logo a span {
+    color: var(--color-black);
+    display: block;
+    font-family: "Inter Display", Sans-Serif;
+    font-feature-settings: "case", "cpsp", "ss03";
+    font-weight: 700;
+    letter-spacing: 0.0225em;
+    line-height: 1;
+    white-space: nowrap;
+}
+@media (min-width: 64em) {
+    .nav__main {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .nav__body {
+        width: 25em;
+    }
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 3.25em;
+}
+.page__content {
+    margin-top: -0.3em;
+    display: flex;
+    flex-direction: column;
+    font-family: Rufina, serif;
+}
+.page__content > * + * {
+    margin-top: var(--spacing, 1.3em);
+}
+button {
+    flex-shrink: 0;
+    width: 250px;
+    outline: 0;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    background: #275dad;
+    color: #fff;
+    border-radius: 8px;
+    padding: 14px 24px 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+}
