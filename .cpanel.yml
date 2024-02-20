@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home4/leonbfao/remotecollective.one/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp -R files $DEPLOYPATH
