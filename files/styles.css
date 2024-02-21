@@ -119,7 +119,10 @@ strong {
         padding-left: 2em;
         padding-right: 2em;
     }
+   
 }
+
+
 .nav {
     display: flex;
     flex-direction: column;
@@ -131,12 +134,16 @@ strong {
     justify-content: space-between;
     display: flex;
     flex: 1;
+    flex-wrap: wrap;
     gap: 1em;
     margin-inline: auto;
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: min(100%, 34.5em);
 }
+
+
+
 .nav__body {
     align-items: center;
     display: flex;
@@ -156,6 +163,14 @@ strong {
     font-family: "Inter Display", Sans-Serif;
     font-size: 70%;
 }
+
+@media only screen and (max-width: 450px) {
+    .tagline {
+        margin-top: -17px;
+    }
+}
+
+
 .nav__logo a span {
     color: var(--color-black);
     display: block;
