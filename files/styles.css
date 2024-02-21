@@ -3,6 +3,32 @@
 ::before {
     box-sizing: border-box;
 }
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
 a,
 body,
 button,
@@ -24,6 +50,10 @@ strong {
     padding: 0;
     vertical-align: baseline;
 }
+
+strong {
+    font-weight: 700;
+}
 main,
 nav {
     display: block;
@@ -36,6 +66,10 @@ body {
     --rgb-beige: 252, 247, 248;
     --rgb-blue: 39, 93, 173;
     --rgb-grey: 91, 97, 106;
+    --rgb-pastel-blue-bg: 236, 239, 248;
+    --rgb-pastel-blue: 236,239,248;
+    --rgb-pastel-green: 238,248,236;
+    --rgb-pastel-pink: 248,236,248;
     --rgb-blue-dark: 0, 55, 115;
     --rgb-blue-light: 194, 246, 255;
     --rgb-blue-lighter: 219, 228, 238;
@@ -44,6 +78,11 @@ body {
     --rgb-orange: 255, 138, 0;
     --rgb-white: 255, 255, 255;
     --color-black: rgb(var(--rgb-black));
+    --color-pastel-blue: rgb(var(--rgb-pastel-blue));
+    --color-pastel-blue-bg: rgb(var(--rgb-pastel-blue-bg));
+
+    --color-pastel-green: rgb(var(--rgb-pastel-green));
+    --color-pastel-pink: rgb(var(--rgb-pastel-pink));
     --color-grey: rgb(var(--rgb-grey));
     --color-blue: rgb(var(--rgb-blue));
     --color-blue-dark: rgb(var(--rgb-blue-dark));
@@ -122,11 +161,21 @@ strong {
    
 }
 
+.header {
+
+}
+
+.header p {
+    margin-bottom: 0.5em; /* Add margin between paragraphs */
+    font-size: 1.8rem; /* Adjust font size for hero text */
+
+}
+
 
 .nav {
     display: flex;
     flex-direction: column;
-    margin-bottom: 3.55em;
+    margin-bottom: 2.55em;
     margin-top: 3.55em;
 }
 .nav__main {
@@ -204,9 +253,10 @@ strong {
 .page__content > * + * {
     margin-top: var(--spacing, 1.3em);
 }
-button {
+.button-blue {
     flex-shrink: 0;
     width: 250px;
+    font-family: "Inter Display", Sans-Serif;
     outline: 0;
     text-decoration: none;
     border: 0;
@@ -219,3 +269,166 @@ button {
     font-weight: 700;
     line-height: 1;
 }
+
+.divider {
+    border-top: 1px solid #ccc; /* Light line divider */
+    margin-top: 60px; /* Adjust margin as needed */
+  }
+
+.event-listing {
+    margin-top: 1.3em;
+  }
+  
+  .event-listing h3 {
+    margin-bottom: 40px;
+  }
+  .event-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 1.1em;
+    /* height: 173px;  */
+  }
+
+  
+  .event-date {
+    flex: 1;
+    background-color: var(--color-pastel-green); /* Light pastel background color */
+    background-size: cover; /* Adjust background size */
+    border-radius: 8px; /* Rounded borders */
+    display: flex; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Arrange content in a column */
+    width: 133px;
+    height: 152px;
+  }
+  
+  .date-month, .date-year {
+    font-weight: bold;
+  }
+  
+  .date-year {
+    font-size: 0.8em; /* Adjust font size for the year */
+  }
+  .event-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 3;
+    padding-left: 1em;
+  }
+
+  
+  .event-details h3 {
+    margin-bottom: 0.5em;
+  }
+
+  .event-details h4 {
+    font-weight: 700;
+    margin-bottom: 7px;
+    
+  }
+  
+  .event-details p {
+    margin-bottom: 0.5em;
+    font-size: medium;
+    color: #586574;
+    font-family: "Inter Display", sans-serif;
+    padding-right: 80px;
+  }
+
+  .learn-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    /* margin-left: 20px; */
+    /* padding-right: 30px; */
+
+
+  }
+  
+  .learn-more-button {
+    font-size: medium;
+    cursor: pointer;
+    font-family: "Inter Display", sans-serif;
+    color: #fff;
+    padding: 8px 16px; /* Add padding to the button */
+    background-color: #275dad;
+    border-radius: 4px;
+    /* transition: background-color 0.3s, border-color 0.3s;  */
+}
+
+
+.event-name {
+    font-size: 1.3rem ;
+    font-weight: 900;
+}
+
+.event-category {
+    background-color: #275dad;
+    color: #fff;
+    flex-wrap: nowrap;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+  }
+
+  .chip {
+    /* reset */
+    border: 0;
+    color: inherit;
+    line-height: 1;
+    -webkit-appearance: none;
+            appearance: none;
+  
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50em;
+    padding: 0.25rem;
+    background-color: hsla(230, 13%, 9%, 0.1);
+  
+    font-size: 0.9375rem;
+  }
+
+  .chip__label {
+    padding: 0 0.5rem;
+  }
+
+  
+  .learn-more-button:hover {
+    background-color: #163f7c;
+  }
+  
+
+  @media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+        
+    }
+
+    .event-date {
+        width: auto;
+        height: auto;
+    }
+
+    .learn-more {
+
+    }
+
+    .event-details {
+        padding-left: 0;
+    }
+
+    .event-details p {
+        padding-right: 0;
+    }
+
+    .event-name {
+        margin-top: 20px;
+    }
+  }
