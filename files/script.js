@@ -29,4 +29,15 @@ function fetchImage(query) {
   
   // Call the fetchImage function with your search query
 // fetchImage('kashmir');
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   const learnMoreButton = document.querySelector('.learn-more-button');
+//   const eventCard = document.querySelector('.event-card');
+
+//   learnMoreButton.addEventListener('click', function() {
+//       // Toggle a class to expand or collapse the event card
+//       eventCard.classList.toggle('expanded');
+//   });
+// });
   
