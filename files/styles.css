@@ -442,6 +442,7 @@ strong {
     .event-date {
         width: auto;
         height: auto;
+        padding: 25px;
     }
     .event-details {
         padding-left: 0;
